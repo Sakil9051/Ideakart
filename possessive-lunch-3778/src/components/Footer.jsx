@@ -1,4 +1,5 @@
-import React from 'react'
+import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import {
     ListItem,
     UnorderedList,
@@ -7,18 +8,36 @@ import {
     Link
   } from '@chakra-ui/react'
 const Footer = () => {
+  let navigate = useNavigate();
   return (
     <div>
     <Stack ml={"5rem"} mr={"5rem"} mt={"1rem"} mb={"2rem"}>   
  <Text fontSize='xl'>Get To Know Us</Text>
 <UnorderedList>
-  <ListItem color={"blue.500"}><Link href='/about' >About</Link></ListItem>
-  <ListItem color={"blue.500"}><Link href='/contact' >Contact</Link></ListItem>
-  <ListItem color={"blue.500"}><Link href='https://ideakart.com/search' >Search</Link></ListItem>
-  <ListItem color={"blue.500"}><Link href='https://ideakart.com/privacy' >Privacy Policy</Link></ListItem>
-  <ListItem color={"blue.500"}><Link href='https://ideakart.com/refund-policy' >Refund Policy</Link></ListItem>
-  <ListItem color={"blue.500"}> <Link href='https://ideakart.com/make-money' >Earn Money Online</Link></ListItem>
-  <ListItem color={"blue.500"}><Link href='https://chakra-ui.com' >QuickBuyer</Link></ListItem>
+  <ListItem color={"blue.500"}>
+  <Text  cursor={"pointer"}  fontSize={["xs","sm","md"]} onClick={()=>{
+    navigate("/about")
+  }}>About</Text></ListItem>
+  <ListItem color={"blue.500"}>
+  <Text  cursor={"pointer"}  fontSize={["xs","sm","md"]} onClick={()=>{
+    navigate("/contact")
+  }}>Contact</Text></ListItem>
+  <ListItem color={"blue.500"}>
+  <Text  cursor={"pointer"}  fontSize={["xs","sm","md"]} onClick={()=>{
+    navigate("https://ideakart.com/search")
+  }}>Search</Text></ListItem>
+  <ListItem color={"blue.500"}>
+  <Text  cursor={"pointer"}  fontSize={["xs","sm","md"]} onClick={()=>{
+    navigate("https://ideakart.com/privacy")
+  }}>Privacy Policy</Text></ListItem>
+  <ListItem color={"blue.500"}>
+  <Text  cursor={"pointer"}  fontSize={["xs","sm","md"]} onClick={()=>{
+    navigate("https://ideakart.com/privacy")
+  }}>Refund Policy</Text></ListItem>
+  <ListItem color={"blue.500"}>
+  <Text  cursor={"pointer"}  fontSize={["xs","sm","md"]} onClick={()=>{
+    navigate("https://ideakart.com/make-money")
+  }}>Earn Money Online</Text></ListItem>
   
 </UnorderedList>
 </Stack> 

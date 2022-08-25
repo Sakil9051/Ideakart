@@ -5,26 +5,26 @@ const Navbar = () => {
   let navigate = useNavigate();
   return (
     <div>
-      <Container maxW='2x1' bg='blue.600' color='white'>
+      <Container maxW={"100%"} bg='rgb(40,116,240)' color='white'>
     <HStack >
     <Text color="yellow" fontSize='xl' cursor={"pointer"} onClick={()=>{
     navigate("/")
   }}> IDEAKART</Text>
     <InputGroup p={"10px"}>
-    <Input size='sm' color={"black"} borderRadius={"0"} w={"sm"} placeholder='Search...' bg={"white"}></Input>
+    <Input size='sm' color={"black"} borderRadius={"0"} w={["10rem","15rem","25rem"]} placeholder='Search...' bg={"white"}></Input>
     <Button size='sm' borderRadius={"0"} color={"black"}>Search</Button>
   <Text onClick={()=>{
     navigate("/about")
-  }} ml={"17rem"} cursor={"pointer"} color="white" fontSize='md'>About</Text>
-  <Text ml={"2rem"} cursor={"pointer"} color="white" fontSize='md' onClick={()=>{
+  }} ml={["15px","10rem","20rem"]} cursor={"pointer"} color="white" fontSize={["xs","sm","md"]}>About</Text>
+  <Text ml={["0.5rem","1rem","2rem"]} cursor={"pointer"} color="white" fontSize={["xs","sm","md"]} onClick={()=>{
     navigate("/contact")
   }}>Contact</Text>
 
-  <Text ml={"2rem"} cursor={"pointer"} color="white" fontSize='md' onClick={()=>{
+  <Text ml={"2rem"} cursor={"pointer"} color="white" fontSize={["xs","sm","md"]} onClick={()=>{
     navigate("/singin")
   }}> Sign In</Text>
 
-  <Text ml={"2rem"} cursor={"pointer"} color="white" fontSize='md' onClick={()=>{
+  <Text ml={"2rem"} cursor={"pointer"} color="white" fontSize={["xs","sm","md"]} onClick={()=>{
     navigate("/singup")
   }}>Sign Up</Text>
   
