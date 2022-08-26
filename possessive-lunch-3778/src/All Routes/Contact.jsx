@@ -6,6 +6,7 @@ const Contact = () => {
       <Stack  width='100%' p={"3rem"} h={"xl"} bgImage="url('https://www.gujarattourism.com/content/dam/gujrattourism/images/flora--fauna/don-hill-station/Don-Hill-Station-Thumbnail.jpg')"
     bgPosition='center'
     bgRepeat='no-repeat'>
+      <Stack align={"center"}><Text fontSize='sm' >You can contact our team by filling this form -</Text></Stack>
         <HStack>
       <Text fontSize='sm' ml={["5rem","10rem","15rem"]} mr={["8rem","15rem","20rem","25rem","30rem"]} fontWeight={"bold"}>First name*</Text>
       <Text fontSize='sm'  fontWeight={"bold"}>Last name*</Text>
