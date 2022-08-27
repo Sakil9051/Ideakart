@@ -8,3 +8,20 @@ export function Singup(data = {}) {
       Password:data.Password
     });
   }
+
+
+  export function Singinuser(data={}) {
+    return axios.get("http://localhost:3000/User-data", {
+      params: {
+        email:data.email,
+        Password:data.Password
+      }
+    });
+  }
+  export function Existinguser(email) {
+    return axios.get("http://localhost:3000/User-data", {
+      params: {
+        email:email
+      }
+    });
+  }

@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
-import {Singup} from "./api"
-import { Stack,HStack, Input,Text,Button,FormControl,
+import {Singup,Existinguser} from "./api"
+import { Stack, Input,Text,Button,FormControl,
   FormLabel,
   FormErrorMessage,
   FormHelperText, } from '@chakra-ui/react'
@@ -14,6 +14,7 @@ import { Stack,HStack, Input,Text,Button,FormControl,
   }
 const Sign_Up = () => {
   const [inputdata, setInputdata] = useState(init);
+  const [Existingusers, setExistingusers] = useState(false);
   const Navigate=useNavigate()
   const handleInputChange = (e) => {
    const {value,name}=e.target;
@@ -22,23 +23,29 @@ const Sign_Up = () => {
   
   const handalesubmit=(e)=>{
     e.preventDefault();
+    
     if(inputdata.name==""||inputdata.email==""||inputdata.Password==""||inputdata.Password_confirmation==""||inputdata.mobile==""){
       alert("Please fill all the fild")
-    }else if(inputdata.Password.length<6){
+    }
+   
+    else if(inputdata.Password.length<6){
       alert("Please enter the Password at least 6 digit")
+    }else if(inputdata.Password.includes("#")==false&&inputdata.Password.includes("@")==false&&inputdata.Password.includes("*")==false){
+      alert("Your password should content # or @ or *")
     }
     else if(inputdata.Password!==inputdata.Password_confirmation){
       alert("Enter the Same password in both password fild")
     }
     else{
       Singup(inputdata).then((res)=>{
-        console.log(res.data)
+        // console.log(res.data)
+        alert("Singup Done")
       })
     }
     
   }
   return (
-    <div>
+  <div>
       <Text pl={"3rem"} fontSize='3xl'>Sign up</Text>
       <Stack p={"3rem"}>
   <FormControl isRequired>

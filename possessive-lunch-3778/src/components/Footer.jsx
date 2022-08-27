@@ -12,7 +12,7 @@ const Footer = () => {
   return (
     <div>
     <Stack ml={"5rem"} mr={"5rem"} mt={"1rem"} mb={"2rem"}>   
- <Text fontSize='xl'>Get To Know Us</Text>
+ <Text fontSize={["md","lg","xl"]}>Get To Know Us</Text>
 <UnorderedList>
   <ListItem color={"blue.500"}>
   <Text  cursor={"pointer"}  fontSize={["xs","sm","md"]} onClick={()=>{

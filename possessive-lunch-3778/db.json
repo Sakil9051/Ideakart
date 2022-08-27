@@ -3,16 +3,9 @@
     {
       "name": "Sahil Laskar",
       "email": "sl713430@gmail.com",
-      "Phone_number": "8777507693",
-      "Password": "123456",
+      "Phone_number": "08777507693",
+      "Password": "123456*",
       "id": 1
-    },
-    {
-      "name": "Sahil Laskar",
-      "email": "sahillaskar137@gmail.com",
-      "Phone_number": "8777507693",
-      "Password": "123456",
-      "id": 2
     }
   ]
 }
