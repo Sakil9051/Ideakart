@@ -1,10 +1,8 @@
 import React from 'react';
 import{FaBars} from "react-icons/fa"
 import {useNavigate} from "react-router-dom"
-import { Container,HStack,Text,Input,Button,InputGroup, Drawer,
+import {HStack,Text,Input,Button,InputGroup, Drawer,
   DrawerBody,
-  DrawerFooter,
-  DrawerHeader,
   DrawerOverlay,
   DrawerContent,
   DrawerCloseButton,useDisclosure, Avatar,Menu,

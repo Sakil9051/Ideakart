@@ -1,5 +1,5 @@
 import React from 'react'
-import { Text, Stack,Link,ListItem,UnorderedList } from '@chakra-ui/react'
+import { Text, Stack} from '@chakra-ui/react'
 const Refund_Policy = () => {
   return (
     <div>
