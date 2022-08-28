@@ -4,8 +4,7 @@ import {
     ListItem,
     UnorderedList,
     Text,
-    Stack,
-    Link
+    Stack
   } from '@chakra-ui/react'
 const Footer = () => {
   let navigate = useNavigate();
