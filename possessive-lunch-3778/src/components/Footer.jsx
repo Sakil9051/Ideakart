@@ -28,11 +28,11 @@ const Footer = () => {
   }}>Search</Text></ListItem>
   <ListItem color={"blue.500"}>
   <Text  cursor={"pointer"}  fontSize={["xs","sm","md"]} onClick={()=>{
-    navigate("https://ideakart.com/privacy")
+    navigate("/PrivacyPolicy")
   }}>Privacy Policy</Text></ListItem>
   <ListItem color={"blue.500"}>
   <Text  cursor={"pointer"}  fontSize={["xs","sm","md"]} onClick={()=>{
-    navigate("https://ideakart.com/privacy")
+    navigate("/Refund_Policy")
   }}>Refund Policy</Text></ListItem>
   <ListItem color={"blue.500"}>
   <Text  cursor={"pointer"}  fontSize={["xs","sm","md"]} onClick={()=>{
