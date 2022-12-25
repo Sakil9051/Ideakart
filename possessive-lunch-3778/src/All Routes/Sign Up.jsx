@@ -14,7 +14,7 @@ import { Stack, Input,Text,Button,FormControl,
   }
 const Sign_Up = () => {
   const [inputdata, setInputdata] = useState(init);
-  const [Existingusers, setExistingusers] = useState(false);
+  const [Existing, setExistingusers] = useState(false);
   const Navigate=useNavigate()
   const handleInputChange = (e) => {
    const {value,name}=e.target;
@@ -37,10 +37,16 @@ const Sign_Up = () => {
       alert("Enter the Same password in both password fild")
     }
     else{
-      Singup(inputdata).then((res)=>{
-        // console.log(res.data)
+      Existinguser({inputdata.email}).then(res=>{
+        if(!res.data){
+          Singup(inputdata).then((res)=>{
         alert("Singup Done")
+      })else{
+            alert(" user already exists")
+          }
+        }
       })
+      
     }
     
   }
